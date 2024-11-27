@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const API_BASE_URL = "http://192.168.0.171:810/bis";
+const API_BASE_URL = "https://demomisapi.azurewebsites.net/bis";
 const jwtToken = Cookies.get("token");
 const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
