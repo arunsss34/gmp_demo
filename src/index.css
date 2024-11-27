@@ -1,0 +1,293 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden; 
+}
+
+
+.login_c{
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    background-color: #047a57;
+}
+.small-toggle-button {
+  width: 2rem; 
+  height: 1.5rem; 
+  font-size: 0.8rem; 
+}
+
+
+.appbar{
+  background: rgb(1, 97, 99);
+}
+
+.maincontainer{
+  flex-grow: 1;
+  height:'100vh';
+  overflow: 'auto';
+  background-color: rgb(7, 123, 134);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite
+}
+.loader::before , .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #047a57;
+  animation: prixClipFix 2s linear infinite ;
+}
+.loader::after{
+  transform: rotate3d(90, 90, 0, 180deg );
+  border-color: #226a80;
+}
+
+@keyframes rotate {
+  0%   {transform: rotate(0deg)}
+  100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+}
+
+  .myloader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+}
+
+.no-wrap-table th,
+.no-wrap-table td {
+    white-space: nowrap;
+}
+
+.custom-header {
+  background-color: #48a1eb; 
+  color: #fff;             
+  font-weight: bold;
+}
+
+.dropdown-container {
+  position: absolute;
+  margin-top:30%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dropdown-container2 {
+  position: absolute;
+  margin-top:40%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150%;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 150px;
+}
+
+.search-input {
+  width: 100%;
+  padding-left: 2rem; 
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.5rem; 
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem; 
+}
+
+
+
+.ag-theme-alpine .ag-body-viewport {
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .ag-theme-alpine .ag-header-cell {
+    font-size: 12px;
+    padding: 0.5px; 
+  }
+  .ag-theme-alpine .ag-cell {
+    font-size: 12px;
+    white-space: nowrap; 
+    overflow: hidden;
+    padding: 0.5px; 
+  }
+  .ag-theme-alpine .ag-paging-panel {
+    font-size: 10px; 
+  }
+
+  .ag-theme-alpine .ag-paging-button {
+    font-size: 10px; 
+  }
+}
+
+.centered-cell {
+  background-color:#ffffff;
+  font-weight: bold;
+}
+
+.custom-tabview .p-tabview {
+  background-color: rgb(73, 25, 25) !important; 
+}
+
+.custom-tabview .p-tabview-nav {
+  background-color:rgb(90, 8, 8) !important; 
+}
+
+.custom-tabview .p-tabview-panels {
+  background-color:rgb(97, 17, 17) !important; 
+}
+
+
+.hover-color{
+  background:whitesmoke;
+  color:gray;
+  border-color:gray;
+
+}
+.hover-color:hover {
+  background-color: rgb(0, 174, 255);
+  color: white; 
+}
+
+.ag-theme-custom-red .ag-cell {
+  color: var(--data-font-color); /* Apply data font color */
+}
+
+.ag-theme-custom-red .ag-row {
+  background-color: var(--row-background-color);
+}
+
+.ag-theme-custom-red .ag-row:nth-child(odd) {
+  background-color: var(--odd-row-background-color);
+}
+
+.ag-theme-custom-red .ag-row:nth-child(even) {
+  background-color: var(--even-row-background-color);
+}
+
+.ag-theme-custom-red .ag-header {
+  background-color: var(--header-background-color);
+}
+
+.ag-theme-custom-red .ag-header-cell {
+  color: var(--header-font-color); /* Use the header font color variable */
+}
+
+
+
+.light-theme .dx-header-row {
+  background-color: var(--header-background-color);
+  color: var(--header-font-color);
+}
+
+
+.dark-theme .dx-header-row {
+  background-color: var(--header-background-color);
+  color: var(--header-font-color);
+}
+.light-theme .dx-datagrid-rowsview .dx-row {
+  background-color: var(--row-background-color);
+  color: var(--data-font-color);
+  border-bottom: 1px solid var(--header-background-color); 
+}
+
+.dark-theme .dx-datagrid-rowsview .dx-row {
+  background-color: var(--row-background-color) !important;
+  color: var(--data-font-color) !important;
+  border-bottom: 1px solid var(--header-background-color); /* Add a border between rows */
+}
+
+.dark-theme .dx-datagrid-rowsview .dx-row-alt {
+  background-color: var(--row-background-color) !important;
+  color: var(--data-font-color) !important;
+  border-bottom: 1px solid var(--header-background-color); /* Add a border between rows */
+}
+
+
+
+/* Light theme group header styles */
+.light-theme .dx-datagrid-rowsview .dx-group-row {
+  background-color: var(--header-background-color) !important;
+  color: var(--header-font-color) !important;
+}
+
+/* Dark theme group header styles */
+.dark-theme .dx-datagrid-rowsview .dx-group-row {
+  background-color: var(--header-background-color) !important;
+  color: var(--header-font-color) !important;
+}
+
+.light-theme .dx-datagrid-summary-row {
+  background-color: var(--header-background-color) !important;
+  color: var(--header-font-color) !important;
+  font-weight: bold;
+}
+
+/* Dark theme summary row styles */
+.dark-theme .dx-datagrid-summary-row {
+  background-color: var(--header-background-color) !important;
+  color: var(--header-font-color) !important;
+  font-weight: bold;
+}
+
+/* Light theme group summary row styles */
+.light-theme .dx-datagrid-summary-item {
+  background-color: var(--header-background-color) !important;
+  color: var(--header-font-color) !important;
+}
+
+/* Dark theme group summary row styles */
+.dark-theme .dx-datagrid-summary-item {
+  background-color: var(--header-background-color) !important;
+  color: var(--header-font-color) !important;
+}
+
+
+:root {
+  --header-background-color: #258f45;
+  --row-background-color: #fff;
+  --odd-row-background-color: #f8f8f8;
+  --even-row-background-color: #ffffff;
+  --data-font-color: #ce1111; /* Data font color variable */
+  --header-font-color: #741919; /* Header font color variable */
+}
+
+
+
+
+
+
+
+
+
+
+
